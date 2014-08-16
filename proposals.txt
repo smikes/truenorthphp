@@ -1,0 +1,137 @@
+--
+Teaching Programming to Kids
+
+This 40-minute presentation (+10 minutes planned question time) is a call to action , with the goal of getting programmers excited about teaching programming.
+
+First I will discuss WHY we should teach programming to kids and why programming is not well-suited to the classroom environment -- it is better taught one-on-one or in small groups.
+
+Then I will outline HOW I think we should teach programming to kids: by setting up an environment where they can experience a flow state and a sense of agency over the computer, and then mostly staying out of their way while they have that experience.  I explain the positive psychology concepts of 'flow' and 'agency' in non-technical language and identify several barriers to achieving them that the teacher should remove.
+
+Finally I give a set of TIPS and OBSERVATIONS that I have collected from my own experience and from talking to others.  My experience comes as a homeschooling parent who has been teaching computers and programming both to my own children and in my community.  I give concrete suggestions for working with kids of all ages, but mostly school-aged and teenage kids.  
+
+The talk is deliberately shorter than the allowed time, in order to have time for QUESTIONS and DISCUSSION.  My talk cannot possibly cover all the material, and members of the audience often have useful comments or suggestions.
+
+This talk is successful when it inspires working programmers to teach and mentor young people who are interested in computers and programming to improve their programming skill.
+--
+
+HOW and WHY to node (tutorial)
+
+This is a 3.5 hour tutorial in two parts: basic and intermediate.
+
+The first block is a fast-paced 1.5 hour tutorial aimed at skilled programmers with no experience with node.js, the server-side javascript environment.  During the tutorial, attendees will complete the very basic elements of programming in the node environment:
+
+ - downloading and installing the node runtime
+ - creating a 'Hello World' console app
+ - creating an NPM module
+ - installing and using static analysis tools (linter, test runner, coverage checker)
+ - publishing to the NPM repository
+
+If time permits:
+ - creating an async http server
+ - broad discussion of async handling in node
+
+The second block is a slower-paced 1.75-hour tutorial aimed at advanced programmers.  This will answer the "WHY" question in the title by covering the node addons api.  
+
+In the tutorial, we assume that there is a (legacy) C or C++ library that needs a web frontend.  Rather than linking the library directly into PHP or Apache, we use node to provide a lightweight web server in a separate process, insulating the main web server from instability or crashes.
+
+The tutorial covers:
+
+ - setting up a new addon module
+ - configuring and building with node-gyp
+ - using nan[2] (Native Abstractions for Node) to support node 0.10 and 0.11
+ - building and linking a C/C++ library into a node addon
+
+If time permits, the tutorial will also cover these advanced topics:
+ - concurrency models for the addon
+ - garbage collection protection in the addon
+
+The tutorial is loosely based on Rod Vagg's node addon examples[3], but updated to use nan, and condensed to focus on the use case of an existing, legacy C/C++ library.
+
+The two blocks could be taken either together or separately, depending on the attendee's previous experience with node.  The attendee should bring a laptop with the permission to install new software.  Acceptable OSes include Linux, Mac OS X, Windows 7+.
+
+
+2: https://github.com/rvagg/nan
+3: https://github.com/rvagg/node-addon-examples
+--
+
+SR&ED for Canadian Software Professionals: Overview and Recordkeeping
+
+Canadian law provides a tax credit for Scientific Research and Experimental Development (SRED, often pronounced "shred").  This is intended to incourage innovation and risk-taking in the technology sector in Canada; however, many software professionals are unaware of this credit, how they or their clients can take advantage of it, and what kind of recordkeeping is necessary to support an SR&ED claim.
+
+The first section will:
+
+ - provide an overview of SR&ED law
+
+ - give examples of the kind of software development that cannot be claimed including
+   - routine bug fixes
+   - annual updates (e.g., to conform to new regulations)
+   - areas with only ordinary risk (e.g., schedule risk)
+
+ - give examples of the kind of software development that is likely to be claimable including
+   - protocol analysis
+   - implementing a parser for an unpublished file format
+   - improving perfomance beyond state-of-the-art
+   - other areas with technological risk
+
+In the second section I will discuss what a successful SR&ED claim can amount to: up to 30% of SR&ED expense as a refundable tax credit, paid about 6 months after the claim is filed and approved.  Who can claim the credit depends on who does the work and how:
+
+ - a Canadian developer doing in-house work may claim directly
+ - a Canadian developer doing contract work for a Canadian company may only claim SR&ED if the 
+   client does not claim it
+ - a Canadian developer doing contract work for a non-Canadian company may claim directly
+
+In the third section I will discuss the recordkeeping necessary to make a successful SR&ED claim.  In most cases, developers already keep the necessary records (time spent, log of work done, and relation of work to SR&ED goals), so I will explain the adjustments needed to make the records useful for an SR&ED claim and SR&ED audit.
+
+ - time records should record all time worked, both billed and internal
+ - time records should distinguish between SR&ED and non-SR&ED work
+ - issue tracker (bug database) should note which issues relnotepadated to SR&ED work
+ - revision control should relate specific commits to specific issues
+
+During the audit, you will have the chance to explain to a technically skilled Revenue Canada worker why your work qualifies for the SR&ED credit, so it is essential at this point to have excellent documentation and to be able to clearly explain the risks of the project and the setbacks encountered.  This may be work claimed by the developer, or the developer may be justifying SR&ED claimed by their client.
+
+--
+SRED for Canadian Software Professionals: Overview and Recordkeeping
+
+Canadian law provides a tax credit for Scientific Research and Experimental Development (SRED, often pronounced "shred").  This is intended to encourage innovation and risk-taking in the technology sector in Canada; however, many software professionals are unaware of this credit, how they or their clients can take advantage of it, and what kind of recordkeeping is necessary to support an SR&amp;ED claim.
+
+The first section will:
+
+ - provide an overview of SR&amp;ED law
+
+ - give examples of the kind of software development that does not qualify as SR&amp;ED including
+   - routine bug fixes
+   - annual updates (e.g., to conform to new regulations)
+   - areas with only ordinary risk (e.g., schedule risk)
+
+ - give examples of the kind of software development that is likely to qualify including
+   - protocol analysis
+   - implementing a parser for an unpublished file format
+   - improving performance beyond state-of-the-art
+   - other areas with technological risk
+
+In the second section I will discuss what a successful SR&amp;ED claim can amount to: up to 30% of SR&amp;ED expense as a refundable tax credit, paid about 6 months after the claim is filed and approved.  Who can claim the credit depends on who does the work and how:
+
+ - a Canadian developer doing in-house work may claim directly
+ - a Canadian developer doing contract work for a Canadian company may only claim SR&amp;ED if the 
+   client does not claim it
+ - a Canadian developer doing contract work for a non-Canadian company may claim directly
+
+In the third section I will discuss the recordkeeping necessary to make a successful SR&amp;ED claim.  In most cases, developers already keep the necessary records (time spent, log of work done, and relation of work to SR&amp;ED goals), so I will explain the adjustments needed to make the records useful for an SR&amp;ED claim and SR&amp;ED audit.
+
+ - time records should record all time worked, both billed and internal
+ - time records should distinguish between SR&amp;ED and non-SR&amp;ED work
+ - issue tracker (bug database) should note which issues related to SR&amp;ED work
+ - revision control should relate specific commits to specific issues
+
+During the audit, you will have the chance to explain to a technically skilled Revenue Canada auditor why your work qualifies for the SR&amp;ED credit, so it is essential at this point to have excellent documentation and to be able to clearly explain the risks of the project and the setbacks encountered.  This may be work claimed by the developer, or the developer may be justifying SR&amp;ED claimed by their client.
+
+Finally I will discuss how to effectively get help from an accountant in preparing and submitting SR&amp;ED claims.
+
+Note: the speaker is not qualified to give legal or accounting advice, and no part of this talk should be taken as advice without consulting with legal or accounting professionals.  This is an informational talk.
+
+===
+
+I have been contributing to SR&amp;ED claims in Canada since 2005, on behalf of clients and on my own.  In that time I have participated in one audit, advocating for my own work and a client's.  (This was a full SR&amp;ED audit -- both technical and financial.)  All claims were approved.
+
+If this talk is selected for the conference, I would ask for additional support from my accountants; however I have enough experience about the basic process to talk for fifty productive minutes.
+
