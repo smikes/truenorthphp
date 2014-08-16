@@ -3,6 +3,8 @@
 I'm here today to talk about a language that's almost as old
 as the web itself is.  
 
+One problem with Javascript and web deployment is minification.  You have this chunk of javascript and it's basically unreadable garbage.  Then you minify it and it gets even worse.
+
 ## ECMAScript 4
 
 ### The "Harmony" Effort
